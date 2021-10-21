@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <title>SPARKS BANK</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@500&display=swap" rel="stylesheet">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+  <style type="text/css">
+
+  	body{
+  		background-color: #e7feff;
+  		font-family: 'Zilla Slab', serif;
+		  color: #4B0082;
+		  font-size: 25px;
+  	}
+
+  	.f1{
+  	font-family: 'Zilla Slab', serif;
+		color: #00416a;
+		font-size: 55px;
+		text-align: center;
+  	}
+
+  	a{
+  	font-family: 'Zilla Slab', serif;
+		color:#00416a;
+		font-size: 25px;
+  	}
+
+  	li{
+  		display: inline; 		
+  		float: right;
+      margin: 20px;
+  	}
+
+  li a:hover {
+  background-color:#ace5ee;
+  color: black;
+  border-radius: 90px;
+  padding-top: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 5px;
+}
+
+li a.active {
+  background-color:#87cefa;
+  color: white;
+  padding-top: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 5px;
+  border-radius: 90px;
+}
+
+.card{
+  cursor: pointer;
+  width: 300px;
+  height: 450px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  border-radius: 50px;
+}
+
+
+.card:hover{
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+}
+
+
+
+.grid {
+  margin-left: 100px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  align-items: center;
+  grid-gap: 60px;
+}
+
+.grid1{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  align-items: center;
+  grid-gap: 40px;
+}
+
+.items{
+    margin-left:680px;
+}
+
+.footer-col ul li a{
+    font-size: 16px;
+    text-transform: capitalize;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 300;
+    color: #bbbbbb;
+    display: block;
+    transition: all 0.3s ease;
+}
+.footer-col ul li a:hover{
+    color: #ffffff;
+    padding-left: 8px;
+}
+.footer-col .social-links a{
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    background-color: rgba(255,255,255,0.2);
+    margin:0 10px 10px 0;
+    text-align: center;
+    align-items: center;
+    line-height: 50px;
+    border-radius: 50%;
+    color: #ffffff;
+    transition: all 0.5s ease;
+
+}
+.footer-col .social-links a:hover{
+    color: #24262b;
+    background-color: #ffffff;
+}
+
+footer{
+    background-color:#73a9c2;
+    height: 50px;
+    color: white;
+    width: 100%;
+}
+
+.button {
+  background-color:#87cefa; /* Green */
+  border:none;
+  border-radius: 8px;
+  font-family: 'Zilla Slab', serif;
+  color: white;
+  padding: 10px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;  
+}
+
+.button1:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+</style>
+
+
+</head>
+
+<body>
+
+  <ul>
+  <li><a href="/transfer_history">Transaction History</a></li>
+  <li><a href="/transfer_money">Transfer Money</a></li>
+  <li><a href="/customers">Customers</a></li>
+  <li><a class="active" href="#about">Home</a></li>
+  </ul>
+
+<img src="/static/images/logo1.png" style="margin-left:3%" height="100" width="100">
+
+<section>
+	<p class="f1"><b>Welcome to the Sparks Bank</b></p>
+  <img src="static/images/bg3.jpg" style="margin-left:12%" width="1200" height="600">
+</section>
+
+
+<section>
+
+<p class="f1">What would you like to do?</p><br>
+ 
+<div class="grid">
+ 
+      <div class="card">
+        <h3 style="margin-left:17%">View Customers</h3>
+        <img src="static/images/customer.png"width="300" height="300">
+        <button id="ida1" class="button button1" style="margin-left: 35%">View</button><br><br>
+            <script type="text/javascript">
+            document.getElementById("ida1").onclick = function () {
+            location.href = "/customers";
+             };
+            </script>
+      </div>
+  
+      <div class="card card-2">
+        <h3 style="margin-left:7%">Transaction History</h3>
+        <img src="static/images/transaction.png" width="300" height="300">
+        <button id="ida2" class="button button1" style="margin-left:35%">View</button><br><br>
+            <script type="text/javascript">
+            document.getElementById("ida2").onclick = function () {
+            location.href = "/transfer_history";
+            };
+            </script>
+      </div>
+    
+      <div class="card card-3">
+        <h3 style="margin-left:17%">Transfer Money</h3>
+        <img src="static/images/transfer.png" width="300" height="300">
+        <button id="ida3" class="button button1" style="margin-left:35%">Start</button><br><br>
+          <script type="text/javascript">
+          document.getElementById("ida3").onclick = function () {
+          location.href = "/transfer_money";
+          };
+          </script>
+      </div>
+
+<br><br><br>
+</div>
+
+</section>
+
+
+
+<footer>
+  <div class="footer-col">
+                
+                <div class="social-links">
+                    <div class="items">
+                    <a href="#"><span data-feather="facebook"></span></a>
+                    <a href="#"><span data-feather="mail"></span></a>
+                    <a href="#"><span data-feather="instagram"></span></a>
+                    <a href="#"><span data-feather="twitter"></span></a>
+                </div>
+                </div>
+            </div>
+</footer>
+
+<script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script>
+    <script>
+      feather.replace()
+    </script> 
+
+</body>
+</html>  
